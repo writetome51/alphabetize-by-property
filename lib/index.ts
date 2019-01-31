@@ -1,4 +1,5 @@
-import {errorIfNotString, errorIfNotArray} from 'basic-data-handling';
+import { errorIfNotString } from 'basic-data-handling/errorIfNotString';
+import { errorIfNotArray } from 'basic-data-handling/errorIfNotArray';
 
 
 // This function coerces the values into strings before doing the comparison.

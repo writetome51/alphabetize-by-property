@@ -1,3 +1,3 @@
-var alphabetizeByProperty = require('./lib/alphabetizeByProperty');
+var alphabetizeByProperty = require('./lib/index');
 
 module.exports = alphabetizeByProperty;

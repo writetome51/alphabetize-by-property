@@ -13,10 +13,10 @@
   "keywords": [
     "alphabetize",
     "objects",
-     "array",
+    "array",
     "alphabetical",
     "order"
-    ],
+  ],
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
