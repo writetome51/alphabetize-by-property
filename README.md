@@ -5,7 +5,14 @@ It re-orders objects alphabetically by property.
 It coerces each property value into a string before doing the sorting.  
 The values of the properties are not modifed.
 
+## Installation
 
+You must have npm installed first.  Then, in the command line:
+
+```bash
+npm install @writetome51/alphabetize-by-property
+```
+## Loading
 To include in your project:
 ```
 // If using TypeScript:
@@ -14,7 +21,7 @@ import {alphabetizeByProperty} from '@writetome51/alphabetize-by-property';
 var alphabetizeByProperty = 
 	require('@writetome51/alphabetize-by-property').alphabetizeByProperty;
 ```
-## Example
+## Examples
 ```
 let roster = [
 	{name: 'Rod Carmichael', group: 'D'},
