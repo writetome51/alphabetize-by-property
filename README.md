@@ -13,7 +13,6 @@ You must have npm installed first.  Then, in the command line:
 npm install @writetome51/alphabetize-by-property
 ```
 ## Loading
-To include in your project:
 ```
 // If using TypeScript:
 import {alphabetizeByProperty} from '@writetome51/alphabetize-by-property';
