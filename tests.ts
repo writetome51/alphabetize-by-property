@@ -1,6 +1,6 @@
 import { alphabetizeByProperty } from './index';
 
-let roster = [
+let roster: any[] = [
 	{name: 'Rod Carmichael', group: 'D'},
 	{name: 'Todd Garfunkel', group: 'B'},
 	{name: 'Rachel Green', group: 'E'},
@@ -44,3 +44,21 @@ roster =  [
 alphabetizeByProperty('group', roster);
 
 console.log(roster);
+console.log('');
+
+roster = [
+	{player: {name: 'Rod'}},
+	{player: {name: 'Mick'}},
+	{player: {name: 'Charlie'}},
+	{player: {name: 'Todd'}},
+	{player: {name: 'Flip'}},
+	{player: {name: 'Rachel'}},
+	{player: {name: 'Monica'}},
+];
+
+alphabetizeByProperty('player.name', roster);
+console.log(roster);
+
+
+// test errors
+alphabetizeByProperty('', [1,2]);

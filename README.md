@@ -1,9 +1,10 @@
 # alphabetizeByProperty()
-## alphabetizeByProperty(property, objects): void
+## alphabetizeByProperty(property: string, objects): void
 
 It re-orders objects alphabetically by property.  
 It coerces each property value into a string before doing the sorting.  
-The values of the properties are not modifed.
+The values of the properties are not modifed.  
+NOTE:  you can use dot-notation in the property string.
 
 ## Installation
 
@@ -44,6 +45,35 @@ roster is now
 	{name: 'Rachel Green', group: 'E'}
 ]
 ************/
+
+
+// You can include dot-notation to alphabetize by a property of a property:
+
+roster = [
+	{player: {name: 'Rod'}},
+	{player: {name: 'Mick'}},
+	{player: {name: 'Charlie'}},
+	{player: {name: 'Todd'}},
+	{player: {name: 'Flip'}},
+	{player: {name: 'Rachel'}},
+	{player: {name: 'Monica'}},
+];
+
+alphabetizeByProperty('player.name', roster);
+
+/************
+roster is now
+[ 
+    { player: { name: 'Charlie' } },
+    { player: { name: 'Flip' } },
+    { player: { name: 'Mick' } },
+    { player: { name: 'Monica' } },
+    { player: { name: 'Rachel' } },
+    { player: { name: 'Rod' } },
+    { player: { name: 'Todd' } }
+]
+************/
+
 
 // What about alphabetizing characters with diacriticals?
 

@@ -35,3 +35,17 @@ roster = [
 ];
 index_1.alphabetizeByProperty('group', roster);
 console.log(roster);
+console.log('');
+roster = [
+    { player: { name: 'Rod' } },
+    { player: { name: 'Mick' } },
+    { player: { name: 'Charlie' } },
+    { player: { name: 'Todd' } },
+    { player: { name: 'Flip' } },
+    { player: { name: 'Rachel' } },
+    { player: { name: 'Monica' } },
+];
+index_1.alphabetizeByProperty('player.name', roster);
+console.log(roster);
+// test errors
+index_1.alphabetizeByProperty('', [1, 2]);
