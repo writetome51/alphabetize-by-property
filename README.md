@@ -6,21 +6,6 @@ It coerces each property value into a string before doing the sorting.
 The values of the properties are not modifed.  
 NOTE:  you can use dot-notation in the property string.
 
-## Installation
-
-You must have npm installed first.  Then, in the command line:
-
-```bash
-npm install @writetome51/alphabetize-by-property
-```
-## Loading
-```
-// If using TypeScript:
-import {alphabetizeByProperty} from '@writetome51/alphabetize-by-property';
-// If using ES5 JavaScript:
-var alphabetizeByProperty = 
-	require('@writetome51/alphabetize-by-property').alphabetizeByProperty;
-```
 ## Examples
 ```
 let roster = [
@@ -129,4 +114,20 @@ roster is now
     { name: 'Charlie Brown', group: 'ZZZ' } 
 ]
 ************/
+```
+
+## Installation
+
+You must have npm installed first.  Then, in the command line:
+
+```bash
+npm install @writetome51/alphabetize-by-property
+```
+## Loading
+```
+// If using TypeScript:
+import {alphabetizeByProperty} from '@writetome51/alphabetize-by-property';
+// If using ES5 JavaScript:
+var alphabetizeByProperty = 
+	require('@writetome51/alphabetize-by-property').alphabetizeByProperty;
 ```

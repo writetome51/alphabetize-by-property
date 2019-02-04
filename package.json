@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/writetome51/alphabetize-by-property#readme",
   "devDependencies": {
-    "@writetome51/get-array-from-property": "~1.1.0"
+    "@writetome51/get-array-from-property": "~1.1.0",
+    "@writetome51/arrays-match": "~1.0.4"
   },
   "dependencies": {
     "@writetome51/get-property": "~1.0.1",
