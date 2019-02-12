@@ -87,7 +87,7 @@ else
     console.log('test 6 FAILED');
 errorTriggered = false;
 try {
-    index_1.alphabetizeByProperty('prop', []);
+    index_1.alphabetizeByProperty('prop', {});
 }
 catch (e) {
     errorTriggered = true;
@@ -96,25 +96,3 @@ if (errorTriggered)
     console.log('test 7 passed');
 else
     console.log('test 7 FAILED');
-errorTriggered = false;
-try {
-    index_1.alphabetizeByProperty('prop', [{ prop: 'a' }]);
-}
-catch (e) {
-    errorTriggered = true;
-}
-if (errorTriggered)
-    console.log('test 8 passed');
-else
-    console.log('test 8 FAILED');
-errorTriggered = false;
-try {
-    index_1.alphabetizeByProperty('prop', {});
-}
-catch (e) {
-    errorTriggered = true;
-}
-if (errorTriggered)
-    console.log('test 9 passed');
-else
-    console.log('test 9 FAILED');

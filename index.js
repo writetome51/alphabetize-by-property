@@ -7,9 +7,8 @@ var get_property_1 = require("@writetome51/get-property");
 // property is a string that can contain dot-notation.
 function alphabetizeByProperty(property, objects) {
     errorIfNotArray_1.errorIfNotArray(objects);
-    if (objects.length < 2) {
-        throw new Error('Input must be array with more than 1 item.');
-    }
+    if (objects.length < 2)
+        return;
     objects.sort(function (a, b) {
         var aProp = get_property_1.getProperty(property, a); // allows dot-notation.
         var bProp = get_property_1.getProperty(property, b); // allows dot-notation.

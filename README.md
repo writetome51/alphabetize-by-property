@@ -1,7 +1,7 @@
 # alphabetizeByProperty()
 ## alphabetizeByProperty(property: string, objects): void
 
-It re-orders objects alphabetically by property.  
+It re-orders <b>objects</b> alphabetically by <b>property</b>.  
 It coerces each property value into a string before doing the sorting.  
 The values of the properties are not modifed.  
 NOTE:  you can use dot-notation in the property string.

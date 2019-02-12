@@ -18,7 +18,6 @@ if (arraysMatch(result, ['A', 'B', 'C', 'D', 'D', 'E'])) console.log('test 1 pas
 else console.log('test 1 FAILED');
 
 
-
 roster = [
 	{name: 'Rod Carmichael', group: 'Ò'},
 	{name: 'Todd Garfunkel', group: 'Í'},
@@ -32,7 +31,6 @@ alphabetizeByProperty('group', roster);
 result = getArrayFromProperty('group', roster);
 if (arraysMatch(result, ['A', 'Å', 'I', 'Í', 'O', 'Ò'])) console.log('test 2 passed');
 else console.log('test 2 FAILED');
-
 
 
 roster = [
@@ -53,7 +51,6 @@ if (arraysMatch(result, ['A', 'Å', null, undefined, undefined, undefined, 'Z', 
 else console.log('test 3 FAILED');
 
 
-
 roster = [
 	{player: {name: 'Rod'}},
 	{player: {name: 'Charlie'}},
@@ -71,10 +68,9 @@ if (arraysMatch(result, ['Charlie', 'Flip', 'Mick', 'Monica', 'Rachel', 'Rod', '
 else console.log('test 4 FAILED');
 
 
-
 // test errors
 let errorTriggered = false;
-try{
+try {
 	alphabetizeByProperty('', roster);
 }
 catch (e) {
@@ -85,7 +81,7 @@ else console.log('test 5 FAILED');
 
 
 errorTriggered = false;
-try{
+try {
 	alphabetizeByProperty([], roster);
 }
 catch (e) {
@@ -96,33 +92,11 @@ else console.log('test 6 FAILED');
 
 
 errorTriggered = false;
-try{
-	alphabetizeByProperty('prop', []);
+try {
+	alphabetizeByProperty('prop', {});
 }
 catch (e) {
 	errorTriggered = true;
 }
 if (errorTriggered) console.log('test 7 passed');
 else console.log('test 7 FAILED');
-
-
-errorTriggered = false;
-try{
-	alphabetizeByProperty('prop', [{prop:'a'}]);
-}
-catch (e) {
-	errorTriggered = true;
-}
-if (errorTriggered) console.log('test 8 passed');
-else console.log('test 8 FAILED');
-
-
-errorTriggered = false;
-try{
-	alphabetizeByProperty('prop', {});
-}
-catch (e) {
-	errorTriggered = true;
-}
-if (errorTriggered) console.log('test 9 passed');
-else console.log('test 9 FAILED');

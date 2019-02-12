@@ -7,9 +7,8 @@ import { getProperty } from '@writetome51/get-property';
 
 export function alphabetizeByProperty(property, objects): void {
 	errorIfNotArray(objects);
-	if (objects.length < 2){
-		throw new Error('Input must be array with more than 1 item.');
-	}
+	if (objects.length < 2) return;
+	
 	objects.sort((a, b) => {
 		let aProp = getProperty(property, a);  // allows dot-notation.
 		let bProp = getProperty(property, b); // allows dot-notation.
