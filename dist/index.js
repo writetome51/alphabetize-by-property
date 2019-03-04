@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var errorIfNotArray_1 = require("basic-data-handling/errorIfNotArray");
 var get_property_1 = require("@writetome51/get-property");
-// Modifies the order of objects.
+// Modifies the order of `objects`.
 // This function coerces the values into strings before doing the comparison.
-// property is a string that can contain dot-notation.
+// `property` is a string that can contain dot-notation.
 function alphabetizeByProperty(property, objects) {
     errorIfNotArray_1.errorIfNotArray(objects);
     if (objects.length < 2)

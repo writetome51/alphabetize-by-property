@@ -1,9 +1,9 @@
 import { errorIfNotArray } from 'basic-data-handling/errorIfNotArray';
 import { getProperty } from '@writetome51/get-property';
 
-// Modifies the order of objects.
+// Modifies the order of `objects`.
 // This function coerces the values into strings before doing the comparison.
-// property is a string that can contain dot-notation.
+// `property` is a string that can contain dot-notation.
 
 export function alphabetizeByProperty(property, objects): void {
 	errorIfNotArray(objects);

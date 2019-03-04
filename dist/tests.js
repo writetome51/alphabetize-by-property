@@ -3,6 +3,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = require("./index");
 var get_array_from_property_1 = require("@writetome51/get-array-from-property");
 var arrays_match_1 = require("@writetome51/arrays-match");
+// Test 0: make sure it can alphabetize by array index:
+var arrays = [
+    ['teacher', ['thomas', 'stoppard']],
+    ['pastor', ['terry', 'blank']],
+    ['priest', ['sam', 'martin']],
+    ['mayor', ['amy', 'thomas']],
+    ['teacher', ['cathy', 'nguyen']],
+    ['minister', ['nguc', 'leung']]
+];
+index_1.alphabetizeByProperty('1.1', arrays);
+if (arrays_match_1.arraysMatch(arrays, [
+    ['pastor', ['terry', 'blank']],
+    ['minister', ['nguc', 'leung']],
+    ['priest', ['sam', 'martin']],
+    ['teacher', ['cathy', 'nguyen']],
+    ['teacher', ['thomas', 'stoppard']],
+    ['mayor', ['amy', 'thomas']]
+]))
+    console.log('test 0 passed');
+else
+    console.log('test 0 FAILED');
 var roster = [
     { name: 'Rod Carmichael', group: 'D' },
     { name: 'Todd Garfunkel', group: 'B' },

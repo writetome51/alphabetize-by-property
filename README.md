@@ -1,10 +1,15 @@
-# alphabetizeByProperty()
-## alphabetizeByProperty(property: string, objects): void
 
-It re-orders <b>objects</b> alphabetically by <b>property</b>.  
-It coerces each property value into a string before doing the sorting.  
-The values of the properties are not modifed.  
-NOTE:  you can use dot-notation in the property string.
+# alphabetizeByProperty(property, objects): void
+
+Re-orders `objects` alphabetically by `property`.  
+It coerces the value of each `object[property]` in `objects` into a string before  
+doing the sorting.  The values of the properties are not modifed.  
+Parameter `property` is a string that can include dot-notation  
+( 'property.subproperty.subsubproperty') .
+
+Note:  `property` does not have to be an object key.  It can also be an array index.  
+To refer to array indexes, here you need to use dot-notation and not  
+square braces.  Example: `'1.0' instead of [1][0]`
 
 ## Examples
 ```
@@ -31,8 +36,6 @@ roster is now
 ]
 ************/
 
-
-// You can include dot-notation to alphabetize by a property of a property:
 
 roster = [
 	{player: {name: 'Rod'}},
@@ -112,6 +115,34 @@ roster is now
     { name: 'Todd Garfunkel', group: undefined },
     { name: 'Farley Brown', group: 'Z' },
     { name: 'Charlie Brown', group: 'ZZZ' } 
+]
+************/
+
+
+// Now alphabetize by array index.
+// Here we alphabetize by each person's last name,
+// which is index 1 of index 1:
+
+let people = [
+	['teacher', ['thomas', 'stoppard']],
+	['pastor', ['terry', 'blank']],
+	['priest', ['sam', 'martin']],
+	['mayor', ['amy', 'thomas']],
+	['teacher', ['cathy', 'nguyen']],
+	['minister', ['ng', 'leung']]
+];
+
+alphabetizeByProperty('1.1', people);
+
+/************
+people is now
+[
+	['pastor', ['terry', 'blank']],
+	['minister', ['ng', 'leung']],
+	['priest', ['sam', 'martin']],
+	['teacher', ['cathy', 'nguyen']],
+	['teacher', ['thomas', 'stoppard']],
+	['mayor', ['amy', 'thomas']]
 ]
 ************/
 ```
