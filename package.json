@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/alphabetize-by-property",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Re-orders array of objects alphabetically by the value of a particular property",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,10 +13,12 @@
   },
   "keywords": [
     "alphabetize",
+    "property",
     "objects",
     "array",
     "alphabetical",
-    "order"
+    "order",
+    "sort"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
@@ -26,10 +28,10 @@
   "homepage": "https://github.com/writetome51/alphabetize-by-property#readme",
   "devDependencies": {
     "@writetome51/get-array-from-property": "~1.1.1",
-    "@writetome51/arrays-match": "~1.0.5"
+    "@writetome51/arrays-match": "~1.0.6"
   },
   "dependencies": {
-    "@writetome51/get-property": "~1.0.2",
-    "basic-data-handling": "~1.0.15"
+    "@writetome51/get-property": "~1.0.4",
+    "error-if-not-array": "~1.0.0"
   }
 }
