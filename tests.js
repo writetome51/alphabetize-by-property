@@ -1,6 +1,7 @@
-import { alphabetizeByProperty } from './index';
+import { alphabetizeByProperty } from './index.js';
 import { getArrayFromProperty } from '@writetome51/get-array-from-property';
 import { arraysMatch } from '@writetome51/arrays-match';
+
 // Test 0: make sure it can alphabetize by array index:
 let arrays = [
     ['teacher', ['thomas', 'stoppard']],

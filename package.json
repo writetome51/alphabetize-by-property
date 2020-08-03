@@ -1,12 +1,9 @@
 {
   "name": "@writetome51/alphabetize-by-property",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Re-orders array of objects alphabetically by the value of a particular property",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
+  "type": "module",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/alphabetize-by-property.git"

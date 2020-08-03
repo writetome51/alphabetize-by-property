@@ -1,12 +1,12 @@
 
-# alphabetizeByProperty(property, objects): void
+# alphabetizeByProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: string,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects<br>): void
 
 Re-orders `objects` alphabetically by `property`.  
 It coerces the value of each `object[property]` in `objects` into a string before  
 doing the sorting.  The values of the properties are not modifed.  
-Parameter `property` is a string that can include dot-notation  
-( 'property.subproperty.subsubproperty') .
 
+Note:  `property` is a string that can include dot-notation  
+( 'property.subproperty.subsubproperty') .  
 Note:  `property` does not have to be an object key.  It can also be an array index.  
 To refer to array indexes, here you need to use dot-notation and not  
 square braces.  Example: `'1.0' instead of [1][0]`
@@ -148,11 +148,8 @@ people is now
 ```
 
 ## Installation
-
-You must have npm installed first.  Then, in the command line:
-
 ```bash
-npm install @writetome51/alphabetize-by-property
+npm i @writetome51/alphabetize-by-property
 ```
 ## Loading
 ```js
