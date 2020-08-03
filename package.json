@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/writetome51/alphabetize-by-property#readme",
   "devDependencies": {
-    "@writetome51/get-array-from-property": "~1.1.1",
-    "@writetome51/arrays-match": "~1.0.6"
+    "@writetome51/get-array-from-property": "^2.0.0",
+    "@writetome51/arrays-match": "^2.0.0"
   },
   "dependencies": {
-    "@writetome51/get-property": "~1.0.4",
-    "error-if-not-array": "~1.0.0"
+    "@writetome51/get-property": "^2.0.0",
+    "error-if-not-array": "^2.0.0"
   }
 }

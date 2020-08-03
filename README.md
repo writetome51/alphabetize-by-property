@@ -12,7 +12,7 @@ To refer to array indexes, here you need to use dot-notation and not
 square braces.  Example: `'1.0' instead of [1][0]`
 
 ## Examples
-```
+```js
 let roster = [
 	{name: 'Rod Carmichael', group: 'D'},
 	{name: 'Todd Garfunkel', group: 'B'},
@@ -155,10 +155,6 @@ You must have npm installed first.  Then, in the command line:
 npm install @writetome51/alphabetize-by-property
 ```
 ## Loading
-```
-// If using TypeScript:
+```js
 import {alphabetizeByProperty} from '@writetome51/alphabetize-by-property';
-// If using ES5 JavaScript:
-var alphabetizeByProperty = 
-	require('@writetome51/alphabetize-by-property').alphabetizeByProperty;
 ```

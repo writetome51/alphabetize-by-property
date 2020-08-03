@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("./index");
-var get_array_from_property_1 = require("@writetome51/get-array-from-property");
-var arrays_match_1 = require("@writetome51/arrays-match");
+import { alphabetizeByProperty } from './index';
+import { getArrayFromProperty } from '@writetome51/get-array-from-property';
+import { arraysMatch } from '@writetome51/arrays-match';
 // Test 0: make sure it can alphabetize by array index:
-var arrays = [
+let arrays = [
     ['teacher', ['thomas', 'stoppard']],
     ['pastor', ['terry', 'blank']],
     ['priest', ['sam', 'martin']],
@@ -12,8 +10,8 @@ var arrays = [
     ['teacher', ['cathy', 'nguyen']],
     ['minister', ['nguc', 'leung']]
 ];
-index_1.alphabetizeByProperty('1.1', arrays);
-if (arrays_match_1.arraysMatch(arrays, [
+alphabetizeByProperty('1.1', arrays);
+if (arraysMatch(arrays, [
     ['pastor', ['terry', 'blank']],
     ['minister', ['nguc', 'leung']],
     ['priest', ['sam', 'martin']],
@@ -24,7 +22,7 @@ if (arrays_match_1.arraysMatch(arrays, [
     console.log('test 0 passed');
 else
     console.log('test 0 FAILED');
-var roster = [
+let roster = [
     { name: 'Rod Carmichael', group: 'D' },
     { name: 'Todd Garfunkel', group: 'B' },
     { name: 'Rachel Green', group: 'E' },
@@ -32,9 +30,9 @@ var roster = [
     { name: 'Charlie Brown', group: 'D' },
     { name: 'Flip Mavunkel', group: 'C' }
 ];
-index_1.alphabetizeByProperty('group', roster);
-var result = get_array_from_property_1.getArrayFromProperty('group', roster);
-if (arrays_match_1.arraysMatch(result, ['A', 'B', 'C', 'D', 'D', 'E']))
+alphabetizeByProperty('group', roster);
+let result = getArrayFromProperty('group', roster);
+if (arraysMatch(result, ['A', 'B', 'C', 'D', 'D', 'E']))
     console.log('test 1 passed');
 else
     console.log('test 1 FAILED');
@@ -46,9 +44,9 @@ roster = [
     { name: 'Charlie Brown', group: 'O' },
     { name: 'Flip Mavunkel', group: 'A' },
 ];
-index_1.alphabetizeByProperty('group', roster);
-result = get_array_from_property_1.getArrayFromProperty('group', roster);
-if (arrays_match_1.arraysMatch(result, ['A', 'Å', 'I', 'Í', 'O', 'Ò']))
+alphabetizeByProperty('group', roster);
+result = getArrayFromProperty('group', roster);
+if (arraysMatch(result, ['A', 'Å', 'I', 'Í', 'O', 'Ò']))
     console.log('test 2 passed');
 else
     console.log('test 2 FAILED');
@@ -62,9 +60,9 @@ roster = [
     { name: 'Todd Garfunkel', group: undefined },
     { name: 'Flip Mavunkel', group: 'A' },
 ];
-index_1.alphabetizeByProperty('group', roster);
-result = get_array_from_property_1.getArrayFromProperty('group', roster);
-if (arrays_match_1.arraysMatch(result, ['A', 'Å', null, undefined, undefined, undefined, 'Z', 'ZZZ']))
+alphabetizeByProperty('group', roster);
+result = getArrayFromProperty('group', roster);
+if (arraysMatch(result, ['A', 'Å', null, undefined, undefined, undefined, 'Z', 'ZZZ']))
     console.log('test 3 passed');
 else
     console.log('test 3 FAILED');
@@ -77,16 +75,16 @@ roster = [
     { player: { name: 'Monica' } },
     { player: { name: 'Mick' } }
 ];
-index_1.alphabetizeByProperty('player.name', roster);
-result = get_array_from_property_1.getArrayFromProperty('player.name', roster);
-if (arrays_match_1.arraysMatch(result, ['Charlie', 'Flip', 'Mick', 'Monica', 'Rachel', 'Rod', 'Todd']))
+alphabetizeByProperty('player.name', roster);
+result = getArrayFromProperty('player.name', roster);
+if (arraysMatch(result, ['Charlie', 'Flip', 'Mick', 'Monica', 'Rachel', 'Rod', 'Todd']))
     console.log('test 4 passed');
 else
     console.log('test 4 FAILED');
 // test errors
-var errorTriggered = false;
+let errorTriggered = false;
 try {
-    index_1.alphabetizeByProperty('', roster);
+    alphabetizeByProperty('', roster);
 }
 catch (e) {
     errorTriggered = true;
@@ -97,7 +95,7 @@ else
     console.log('test 5 FAILED');
 errorTriggered = false;
 try {
-    index_1.alphabetizeByProperty([], roster);
+    alphabetizeByProperty([], roster);
 }
 catch (e) {
     errorTriggered = true;
@@ -108,7 +106,7 @@ else
     console.log('test 6 FAILED');
 errorTriggered = false;
 try {
-    index_1.alphabetizeByProperty('prop', {});
+    alphabetizeByProperty('prop', {});
 }
 catch (e) {
     errorTriggered = true;
