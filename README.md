@@ -2,14 +2,18 @@
 # alphabetizeByProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: string,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects<br>): void
 
 Re-orders `objects` alphabetically by `property`.  
-It coerces the value of each `object[property]` in `objects` into a string before  
-doing the sorting.  The values of the properties are not modifed.  
+It coerces the value of each `object[property]` in `objects` into a string to  
+do the sorting.  The values of the properties are not modifed.  
+The sorting algorithm simply compares the unicode value of `property` in every 2  
+adjacent objects to decide which should come first, like so:  
+`return (String(aProp) < String(bProp) ? -1 : 1);`
 
+Note:  in the results, all uppercase letters in the English alphabet come before  
+all lowercase letters.  
 Note:  `property` is a string that can include dot-notation  
-( 'property.subproperty.subsubproperty') .  
-Note:  `property` does not have to be an object key.  It can also be an array index.  
-To refer to array indexes, here you need to use dot-notation and not  
-square braces.  Example: `'1.0' instead of [1][0]`
+( 'property.subproperty.subsubproperty') . If `property` is an array index, here  
+you need to use dot-notation and not square braces.  Example:  
+`'1.0' // instead of [1][0]`
 
 ## Examples
 ```js
@@ -80,10 +84,10 @@ alphabetizeByProperty('group', roster);
 roster is now
 [
     { name: 'Flip Mavunkel', group: 'A' },
-    { name: 'Mick Jagger', group: 'Å' },
     { name: 'Rachel Green', group: 'I' },
-    { name: 'Todd Garfunkel', group: 'Í' },
     { name: 'Charlie Brown', group: 'O' },
+    { name: 'Mick Jagger', group: 'Å' },
+    { name: 'Todd Garfunkel', group: 'Í' },
     { name: 'Rod Carmichael', group: 'Ò' } 
 ]
 ************/
@@ -108,13 +112,13 @@ alphabetizeByProperty('group', roster);
 roster is now
 [
     { name: 'Flip Mavunkel', group: 'A' },
-    { name: 'Mick Jagger', group: 'Å' },
+    { name: 'Farley Brown', group: 'Z' },
+    { name: 'Charlie Brown', group: 'ZZZ' },
     { name: 'Charlie Brown', group: null }, // null is treated as a string
     { name: 'Rod Carmichael', group: undefined }, // undefined is treated as a string
     { name: 'Rachel Green' }, // missing property is treated as 'undefined'
     { name: 'Todd Garfunkel', group: undefined },
-    { name: 'Farley Brown', group: 'Z' },
-    { name: 'Charlie Brown', group: 'ZZZ' } 
+    { name: 'Mick Jagger', group: 'Å' },
 ]
 ************/
 

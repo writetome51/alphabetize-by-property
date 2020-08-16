@@ -4,6 +4,7 @@
   "description": "Re-orders array of objects alphabetically by the value of a particular property",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/alphabetize-by-property.git"
@@ -24,11 +25,11 @@
   },
   "homepage": "https://github.com/writetome51/alphabetize-by-property#readme",
   "devDependencies": {
-    "@writetome51/get-array-from-property": "^2.0.0",
-    "@writetome51/arrays-match": "^2.0.0"
+    "@writetome51/get-array-from-property": "^2.0.1",
+    "@writetome51/arrays-match": "^2.0.1"
   },
   "dependencies": {
-    "@writetome51/get-property": "^2.0.0",
+    "@writetome51/get-property": "^2.0.1",
     "error-if-not-array": "^2.0.0"
   }
 }

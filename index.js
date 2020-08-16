@@ -11,9 +11,10 @@ export function alphabetizeByProperty(property, objects) {
 	if (objects.length < 2) return;
 
 	objects.sort((a, b) => {
-		let aProp = getProperty(property, a); // allows dot-notation.
-		let bProp = getProperty(property, b); // allows dot-notation.
+		let aProp = getProperty(property, a);
+		let bProp = getProperty(property, b);
+		
 		// decides if a or b comes first.
-		return String(aProp).localeCompare(String(bProp), 'en', {caseFirst: 'upper'});
+		return (String(aProp) < String(bProp) ? -1 : 1);
 	});
 }
